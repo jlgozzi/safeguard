@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:safeguard/screens/login/login_page.dart';
 
 void main() {
   runApp(const MyApp());
@@ -28,10 +29,22 @@ class MyApp extends StatelessWidget {
         //
         // This works for code too, not just values: Most code changes can be
         // tested with just a hot reload.
-        colorScheme: ColorScheme.fromSeed(seedColor: Colors.deepPurple),
+        colorScheme: ColorScheme.fromSeed(
+            seedColor: const Color.fromARGB(255, 8, 202, 89)),
         useMaterial3: true,
+        primaryColorDark: const Color.fromRGBO(30, 35, 44, 100),
+
+        primaryColor: Colors.blue,
+        fontFamily: 'Roboto', // Defina a fonte padrão para todo o aplicativo
+        textTheme: const TextTheme(
+          displayLarge: TextStyle(
+              fontSize: 24, fontWeight: FontWeight.bold, color: Colors.black),
+          bodyLarge: TextStyle(fontSize: 16, color: Colors.grey),
+          // Adici
+        ),
       ),
-      home: const MyHomePage(title: 'Flutter Demo Home Page'),
+      // home: const MyHomePage(title: 'Flutter Demo Home Page'),
+      home: const LoginScreen(),
     );
   }
 }
